@@ -74,7 +74,7 @@ cnn-waste-classification-opencv-pytorch/
 ├── object-detection.py
 ├── validation-checker.py
 ├── validation-splitter.py
-├── requirements.txt
+└── requirements.txt
 ```
 
 * `main.py`: Trains the CNN model for 50 epochs and saves the best model to `saved_models/best_model.pth`.
