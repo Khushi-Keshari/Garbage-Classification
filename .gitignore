@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+
+dataset/
+garbage_classification/
+
+*.pth
+*.pt
+
+.vscode/
+.idea/
