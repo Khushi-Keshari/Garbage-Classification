@@ -16,7 +16,7 @@ The model was trained for 50 epochs on a modified Kaggle Garbage Classification 
 * **Dataset:** Adapted and reorganized the Kaggle Garbage Classification dataset into 12 waste categories.
 * **OpenCV-Based Inference:** Implemented webcam and image-based inference using OpenCV for real-time waste classification.
 * **CNN Architecture:** Designed a six-layer CNN with Batch Normalization and Dropout to improve training stability and reduce overfitting.
-* **Comprehensive Evaluation:** Implemented a validation pipeline with a confusion matrix and accuracy graphs, providing clear insights into model performance.
+* **Comprehensive Evaluation:** Implemented a validation pipeline with validation accuracy, a confusion matrix, and a classification report to evaluate model performance across all 12 classes.
 * **Deep Learning Implementation:** Applied CNN concepts including convolutional layers, Batch Normalization, Dropout, and optimization techniques to build an end-to-end waste classification system.
 
 ---
