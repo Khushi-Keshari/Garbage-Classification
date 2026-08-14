@@ -13,11 +13,11 @@ The model was trained for 50 epochs on a modified Kaggle Garbage Classification 
 
 ## Highlights
 
-* **Customized Dataset:** Adapted the Kaggle Garbage Classification dataset to 12 specific waste categories, optimizing for balanced and practical classification.
-* **OpenCV-Based Inference:** Implemented webcam and image-based inference using OpenCV for testing model performance in real-world scenarios.
-* **Robust CNN Architecture:** Designed a deep CNN with six convolutional layers, batch normalization, and dropout to ensure robust performance and prevent overfitting.
+* **Dataset:** Adapted and reorganized the Kaggle Garbage Classification dataset into 12 waste categories.
+* **OpenCV-Based Inference:** Implemented webcam and image-based inference using OpenCV for real-time waste classification.
+* **CNN Architecture:** Designed a six-layer CNN with Batch Normalization and Dropout to improve training stability and reduce overfitting.
 * **Comprehensive Evaluation:** Implemented a validation pipeline with a confusion matrix and accuracy graphs, providing clear insights into model performance.
-* **Learning Journey:** This project combines knowledge from IBM’s Deep Learning with PyTorch course with hands-on implementation, reflecting my growth in understanding deep learning concepts.
+* **Deep Learning Implementation:** Applied CNN concepts including convolutional layers, Batch Normalization, Dropout, and optimization techniques to build an end-to-end waste classification system.
 
 ---
 
@@ -31,7 +31,6 @@ The model was trained for 50 epochs on a modified Kaggle Garbage Classification 
 * [Evaluation](#evaluation)
 * [Usage Example](#usage-example)
 * [Results](#results)
-* [References](#references)
 * [Author](#author)
 
 ---
@@ -69,7 +68,6 @@ cnn-waste-classification-opencv-pytorch/
 │   │   └── white-glass/
 ├── saved_models/
 │   └── best_model.pth
-├── LICENSE
 ├── main.py
 ├── object-detection.py
 ├── validation-checker.py
@@ -145,7 +143,7 @@ All images are resized to **224 × 224 pixels** to match the CNN input requireme
 
 ## Model Architecture
 
-The CNN is designed for efficiency and accuracy, with six convolutional layers followed by fully connected layers. Below is the model definition:
+The CNN consists of six convolutional layers followed by fully connected layers. Below is the model definition:
 
 ```python
 import torch
@@ -214,7 +212,7 @@ The model was trained with the following hyperparameters:
 * Loss Function: Cross Entropy Loss
 
 Run `main.py` to train the model for 50 epochs. The best model is saved to `saved_models/best_model.pth`.
-**Note:** A pre-trained model (`best_model.pth`) is included in the `saved_models/` directory, allowing users to perform inference without retraining the model.
+**Note:** A trained model checkpoint (`best_model.pth`) is included in the `saved_models/` directory, allowing users to perform inference without retraining the model.
 If you only want to test predictions, you can directly run:
 
 ```bash
@@ -300,19 +298,9 @@ The model achieved a validation accuracy of **89.39%**. Below are the detailed p
 * Webcam Prediction: Real-time classification from webcam feed.
   
   <img width="949" alt="Screenshot 2025-05-26 201547" src="https://github.com/user-attachments/assets/edf863a2-f185-439c-ada8-eb8915c78142" />
-* Image Prediction: Accurate classification of static images.
+* Image Prediction: Classification of static images using the trained CNN.
   
   <img width="164" alt="image" src="https://github.com/user-attachments/assets/6f7bd08c-b139-412c-b1e2-890eb618e075" />
-
-
----
-
-## References
-
-* IBM Deep Learning with PyTorch Course
-* Gyawali, D., Regmi, A., Shakya, A., Gautam, A., and Shrestha, S., 2020. Comparative analysis of multiple deep CNN models for waste classification. arXiv preprint arXiv:2004.02168.
-* Kaggle Garbage Classification Dataset
-
 
 ---
 
